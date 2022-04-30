@@ -1,0 +1,48 @@
+$blue :#3498db;
+.container{
+  display: flex;
+  border: 0.1rem solid red;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+}
+.grid{
+  width: 100%;
+  display: grid;
+  row-gap: 2rem;
+  grid-auto-columns: minmax(50px,800px);
+  align-items: center;
+  justify-content: center;
+}
+.content{
+  display: flex;
+  border-left: 0.3rem solid lightcoral;
+  border-radius: 0.2rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+button{
+  background-color: aqua;
+    border-color: $blue;
+    color: #fff;
+    box-shadow: 0 0 40px 40px $blue inset, 0 0 0 0 $blue;
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 10px 0 $blue inset, 0 0 10px 4px $blue;
+    }
+    width: 30%;
+    margin: auto;
+    height: 50px;
+}
+p{
+  margin: 1rem;
+}
+input{
+  width:30%;
+  margin: 1rem;
+}

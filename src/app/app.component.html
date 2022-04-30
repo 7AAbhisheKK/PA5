@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="grid">
+    <div class="content">
+      <p>Generate Private Keys</p>
+      <button (click)="generateKeys()">Generate Keys</button>
+    </div>
+    <div class="content" *ngIf = "showKeys === true">
+      <p>Your Keys are</p>
+      <p>Private key = {{keys.get('private_key')}}|| q = {{keys.get('q')}} || alpha = {{keys.get('alpha')}} || YA = {{keys.get('YA')}}</p>
+    </div>
+    <div class="content" >
+      <input type="text" placeholder="Enter data here" [(ngModel)]="simpleText" >
+      <button (click) ="encrypt()">Encrypte Data</button>
+    </div>
+    <div class="content" *ngIf = "showCipherText === true">
+      <p>Cipher Text is</p>
+      <p>C1 = {{cipherText.get('C1')}} C2 = {{cipherText.get('C2')}}</p>
+    </div>
+    <div class="content" (click)="decrypt()">
+      <input type="text" placeholder="Enter Ciphered Text C1" [(ngModel)]="C1">
+      <input type="text" placeholder="Enter Ciphered Text C2" [(ngModel)]="C2">
+      <input type="text" placeholder="Enter Private key" [(ngModel)]="privateKey">
+      <button>Decrypt</button>
+    </div>
+    <div class="content" *ngIf = "showDecipheredText == true">
+      <p>Deciphered text is {{decipheredText}}</p>
+    </div>
+  </div>
+</div>
